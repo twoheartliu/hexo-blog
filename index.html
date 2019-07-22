@@ -62,10 +62,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world-1" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-2019-7-22-bref-js-type" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-blog/2019/07/22/hello-world-1/" class="article-date">
-  <time datetime="2019-07-22T09:22:37.000Z" itemprop="datePublished">2019-07-22</time>
+    <a href="/hexo-blog/2019/07/22/2019-7-22-bref-js-type/" class="article-date">
+  <time datetime="2019-07-22T08:05:17.000Z" itemprop="datePublished">2019-07-22</time>
 </a>
     
   </div>
@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/hexo-blog/2019/07/22/hello-world-1/">hello world</a>
+      <a class="article-title" href="/hexo-blog/2019/07/22/2019-7-22-bref-js-type/">JavaScript 中的数据类型</a>
     </h1>
   
 
@@ -84,69 +84,105 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>wawahahaha</p>
-<h1 id="hello-you"><a href="#hello-you" class="headerlink" title="hello you!"></a>hello you!</h1><ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-<li>4]</li>
+        <p>JavaScript 中大致分七种类型：</p>
+<ul>
+<li>String </li>
+<li>Boolean</li>
+<li>Number</li>
+<li>Symbol</li>
+<li>null</li>
+<li>undefined</li>
+<li>Object</li>
+</ul>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>String 即字符串，<code>var a = &#39;Jack&#39;</code> <code>Jack</code> 就是一个字符串。</p>
+<h3 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h3><p>多行字符串的表示方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1. </span><br><span class="line">var a = &apos;a /</span><br><span class="line">b /</span><br><span class="line">c</span><br><span class="line">&apos;</span><br><span class="line">2.</span><br><span class="line">var a = &apos;a&apos; +</span><br><span class="line">&apos;b&apos; +</span><br><span class="line">&apos;c&apos;</span><br><span class="line">3. (es6新语法)</span><br><span class="line">var a = `a</span><br><span class="line">b</span><br><span class="line">c`</span><br></pre></td></tr></table></figure>
+
+<h3 id="转义符"><a href="#转义符" class="headerlink" title="转义符"></a>转义符</h3><p>当需要使用 <code>&#39;</code> 或者<code>&quot;</code> 这种本身标识字符串的符号的时候，需要使用<code>\</code>来转义，不然会报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = &apos;\&apos;&apos;;</span><br><span class="line">var b = &quot;\&quot;&quot;;</span><br><span class="line">// 以及 \ 本身</span><br><span class="line">var c = &apos;\\&apos;; // 这里表示 c = &apos;\&apos;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><p>Boolean 用来表示逻辑上的 true / false 。</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul>
+<li><p>与（&amp;&amp;）两者皆为 true 返回 true ，否则返回 false</p>
+</li>
+<li><p>或（||）两者皆为 false 返回 false， 否则返回 true</p>
+</li>
+<li><p>非（!）取反</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = true;</span><br><span class="line">var b = false;</span><br><span class="line">var c = a || b; // true</span><br><span class="line">var d = a &amp;&amp; b; // false</span><br><span class="line">var e = !a; // false</span><br></pre></td></tr></table></figure>
+
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><h3 id="十进制"><a href="#十进制" class="headerlink" title="十进制"></a>十进制</h3><p>Number 分为整数和小数（浮点数）。可以用科学计数法表示。</p>
+<p><a href="https://github.com/camsong/blog/issues/9" target="_blank" rel="noopener">JavaScript 浮点数陷阱及解法</a></p>
+<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><p><code>0b11</code></p>
+<h3 id="八进制"><a href="#八进制" class="headerlink" title="八进制"></a>八进制</h3><p><code>011</code>（ES5 添加了 0o11 语法）</p>
+<h3 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h3><p><code>0x11</code></p>
+<h2 id="null-与-undefined"><a href="#null-与-undefined" class="headerlink" title="null 与 undefined"></a>null 与 undefined</h2><p>null 和 undefined 类型和值都是他们自己。</p>
+<ul>
+<li>变量没被赋值，默认为 undefined</li>
+<li>对象没被赋值，默认约定为 null</li>
+<li>非对象没被赋值，默认约定为 undefined</li>
+</ul>
+<h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><p><a href="https://zhuanlan.zhihu.com/p/22652486" target="_blank" rel="noopener">方应杭：JS 中的 Symbol 是什么？</a></p>
+<p>一句话解释：Symbol 生成一个全局唯一的值。</p>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>以上被称为原始数据类型，或者基本数据类型。而 Object 被称为复杂数据类型，即各种基本数据类型的排列组合。</p>
+<ul>
+<li><p>object 里面可以有 object</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    name: &apos;Frank&apos;, </span><br><span class="line">    &apos;child&apos;: &#123;</span><br><span class="line">        name: &apos;Jack&apos;</span><br><span class="line">    &#125;, // 最后这个逗号可有可无</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>object 的 key 一律是字符串，不存在其他类型的 key</p>
+</li>
+<li><p>object[‘’] 是合法的</p>
+</li>
+<li><p>object[‘key’] 可以写作 object.key</p>
+</li>
+<li><p>注意 object.key 与 <code>object[key]</code> 不同</p>
+</li>
+<li><p>delete object[‘key’]</p>
+</li>
+<li><p>‘key’ in object</p>
+</li>
+</ul>
+<h2 id="typeof-操作符"><a href="#typeof-操作符" class="headerlink" title="typeof 操作符"></a>typeof 操作符</h2><table>
+<thead>
+<tr>
+<th>xxx 的类型</th>
+<th>string</th>
+<th>number</th>
+<th>boolean</th>
+<th>symbol</th>
+<th>undefined</th>
+<th>null</th>
+<th>object</th>
+<th>function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>typeof xxx</td>
+<td>‘string’</td>
+<td>‘number’</td>
+<td>‘boolean’</td>
+<td>‘symbol’</td>
+<td>‘undefined’</td>
+<td><strong>‘object’</strong></td>
+<td>‘object’</td>
+<td>‘function’</td>
+</tr>
+</tbody></table>
+<p>typeof 的 bug：</p>
+<ul>
+<li><code>typeof null</code> // 输出 <code>object</code> 设计之初的 bug</li>
+<li><code>typeof fn1</code> // 输出 <code>function</code> 其实应该是 object，function 并不是一种数据类型</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/07/22/hello-world-1/" data-id="cjye74bgh000f89ogl98ja8r8" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/07/22/2019-7-22-bref-js-type/" data-id="cjye7blo6000fcgogaa040xp1" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
 
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/hexo-blog/2019/07/22/hello-world/" class="article-date">
-  <time datetime="2019-07-22T09:14:48.388Z" itemprop="datePublished">2019-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/hexo-blog/2019/07/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/07/22/hello-world/" data-id="cjye74bgm000h89oglcym9cp9" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -194,7 +230,7 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/06/10/2019-6-10-common-css/" data-id="cjye74bgf000c89ogtxp473x4" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/06/10/2019-6-10-common-css/" data-id="cjye7blo5000ccgogwehgiuyf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
@@ -261,7 +297,7 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/06/01/2019-6-1-bref-css/" data-id="cjye74bge000a89ogykm4ypwv" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/06/01/2019-6-1-bref-css/" data-id="cjye7blo4000acgogr5ut60e9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
@@ -396,7 +432,7 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/28/2019-5-28-bref-html/" data-id="cjye74bgc000889ogne9dutom" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/28/2019-5-28-bref-html/" data-id="cjye7blo30008cgogti87lgl0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
@@ -441,7 +477,7 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/24/2019-5-24-tags/" data-id="cjye74bg9000789ogjqwp0ao2" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/24/2019-5-24-tags/" data-id="cjye7blo20007cgogy0feeazo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
@@ -502,7 +538,7 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/23/2019-5-23-http-basic/" data-id="cjye74bg6000589og5tgs0d1n" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/23/2019-5-23-http-basic/" data-id="cjye7blo00005cgogab8ttnem" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/HTTP/">HTTP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
@@ -560,7 +596,7 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/17/2019-5-17-github-page-error/" data-id="cjye74bg5000489ogyeqtflyi" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/17/2019-5-17-github-page-error/" data-id="cjye7blnx0003cgogkidu4cva" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
@@ -659,7 +695,7 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/15/2019-5-15-command-line/" data-id="cjye74bg3000389ogl9jdz2x4" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/15/2019-5-15-command-line/" data-id="cjye7blnt0001cgog7jkdbiyg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/命令行/">命令行</a></li></ul>
@@ -767,10 +803,94 @@ THE END
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/04/17/2019-4-17-react-note-0/" data-id="cjye74bh3001989og5whvq1jx" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/04/17/2019-4-17-react-note-0/" data-id="cjye7blop0019cgog0qq02jxg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-to-learn-code" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2018/10/26/how-to-learn-code/" class="article-date">
+  <time datetime="2018-10-26T07:36:18.000Z" itemprop="datePublished">2018-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2018/10/26/how-to-learn-code/">如何学编程的方法论</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>你要记住，写程序也好，包括学说话也好，包括学任何一个技能，包括打篮球学英语都要经过大量的练习<br></p>
+<p>你去学英语，学一个单词一个句子的念法可能要重复几十次上百次<br></p>
+<p>比如说你去学唱一首歌，刚开始你可能连调都跟不上，后来你可能跟上调了<br></p>
+<p>但是你老忘词，你唱了几个星期或者连续几天，你会发现你会唱的比较顺畅，你能把它唱出来<br></p>
+<p>而且也能跟上调，写程序也是一样，任何的技能都应该用大量的时间去学习掌握<br></p>
+<p>当你不会唱这首歌的时候你会怎么办，你会去看一遍歌词，会听一遍然后继续唱歌<br></p>
+<p>写程序应该也是这样的<br></p>
+<br>
+
+<p>当你忘记while怎么写的时候，你应该去看下，或者直接复制下来照着抄<br></p>
+<p>很多人不是这样，上课的时候或者看书的时候，感觉好简单，他把这个书，合起来盖住，<br></p>
+<p>他要把它默写出来，默不出的时候就会很暴躁很急，那这种方式就错了<br></p>
+<p>学唱歌的时候会这样吗？<br></p>
+<p>你忘了歌词你能强行想起来吗，你听一遍歌就能唱出歌词吗，绝无可能<br></p>
+<p>那你学编程的时候为什么要这样做呢？<br></p>
+<br>
+
+<p>这是因为编程是有特殊性的，特殊在你从小到大你并没接触这个东西<br></p>
+<p>你不知道该用怎么样的概念，怎么样一个格式去处理，然后你就懵了<br></p>
+<p>所以你就会去乱搞，那我现在教会你正确的模式<br></p>
+<p>你一定要按照我们教你的方式，这个学习过程就会变得很顺畅，这个方法是对的，你只要加强练习<br></p>
+<br>
+
+<p>就可以掌握知识，编程不是一些魔法或者一些需要天赋，很多人说这个人编程天赋，我不适合编程<br></p>
+<p>这是无稽之谈，就像唱歌跳舞搬砖挖地，都是重复就能做好的事情<br></p>
+<p>开车那么难的一个事情，我不会开车，但是你可能会开车，你怎么学会的呢<br></p>
+<p>你可能去驾校学了几十个小时，练好就会了<br></p>
+<p>编程一个道理，有很多四十岁五十岁的大叔阿姨他都会去学开车并且能够学的会，所以不存在什么天赋问题 <br>骑自行车也是，你去学了花了时间就能掌握，可能你花的时间比别人长一点，这是正常的，大家掌握技能需要不同的时间嘛<br></p>
+<br>
+
+<p>这都是非常正常的，你又不是做爱因斯坦，你为什么期望自己一次搞定呢，为什么别人比你快你就不能接受呢？<br><br>从小到大无数人都比你快啊<br></p>
+<p>各方面你都不是第一名，你照样活得好好的，为什么你在编程上面就要这么纠结呢，这是因为这是一个全新的概念<br></p>
+<p>你无所适从，你现在按照我的方式，就跟唱歌一样去学这个编程，照着他抄<br></p>
+<p>抄个五遍十遍就会了，你复制粘贴去改，改着改着就会了<br></p>
+<p>你不应该去钻牛角尖，摒弃你之前的想法<br></p>
+<br>
+
+<p>还有不要说，你是不是没有天赋，我是不是不适合这样的想法<br></p>
+<p>搬砖这种事情，古代人都要做的，没有你不适合就不用搬砖这种说法，这个世界就是这样的<br></p>
+<p>你现在可以不学编程也能活得好好的，所以你会给自己找各种各样的借口，然后你觉得你不会编程你学不会编程还是照常活着，每天还是吃吃喝喝玩玩乐乐睡觉，没问题，但是你这个想法是错的，不要说没天赋学不会，都是假的<br></p>
+<p>方法不对而已<br></p>
+<p>——摘自萧大<a href="https://www.bilibili.com/video/av13605946" target="_blank" rel="noopener">B站前端试听课</a></p>
+</blockquote>
+<p>如果说有什么支持着我走下去，萧大的这段话算一个。</p>
+<p>贴到这里，希望看到这里的人，有所感触。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2018/10/26/how-to-learn-code/" data-id="cjye7blnn0000cgogx0780jm4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/Coding/">Coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/方法论/">方法论</a></li></ul>
 
     </footer>
   </div>
@@ -797,7 +917,7 @@ THE END
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/Coding/">Coding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/HTTP/">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/命令行/">命令行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/方法论/">方法论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/生活/">生活</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/Coding/">Coding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/HTTP/">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/命令行/">命令行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/方法论/">方法论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/生活/">生活</a></li></ul>
     </div>
   </div>
 
@@ -807,7 +927,7 @@ THE END
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/hexo-blog/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/hexo-blog/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/hexo-blog/tags/Github/" style="font-size: 10px;">Github</a> <a href="/hexo-blog/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/hexo-blog/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/hexo-blog/tags/react/" style="font-size: 10px;">react</a> <a href="/hexo-blog/tags/前端/" style="font-size: 20px;">前端</a> <a href="/hexo-blog/tags/命令行/" style="font-size: 10px;">命令行</a> <a href="/hexo-blog/tags/方法论/" style="font-size: 10px;">方法论</a> <a href="/hexo-blog/tags/生活/" style="font-size: 10px;">生活</a>
+      <a href="/hexo-blog/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/hexo-blog/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/hexo-blog/tags/Github/" style="font-size: 10px;">Github</a> <a href="/hexo-blog/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/hexo-blog/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/hexo-blog/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/hexo-blog/tags/react/" style="font-size: 10px;">react</a> <a href="/hexo-blog/tags/前端/" style="font-size: 20px;">前端</a> <a href="/hexo-blog/tags/命令行/" style="font-size: 10px;">命令行</a> <a href="/hexo-blog/tags/方法论/" style="font-size: 10px;">方法论</a> <a href="/hexo-blog/tags/生活/" style="font-size: 10px;">生活</a>
     </div>
   </div>
 
@@ -829,11 +949,7 @@ THE END
       <ul>
         
           <li>
-            <a href="/hexo-blog/2019/07/22/hello-world-1/">hello world</a>
-          </li>
-        
-          <li>
-            <a href="/hexo-blog/2019/07/22/hello-world/">Hello World</a>
+            <a href="/hexo-blog/2019/07/22/2019-7-22-bref-js-type/">JavaScript 中的数据类型</a>
           </li>
         
           <li>
@@ -846,6 +962,10 @@ THE END
         
           <li>
             <a href="/hexo-blog/2019/05/28/2019-5-28-bref-html/">值得一提的 HTML</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-blog/2019/05/24/2019-5-24-tags/">空标签和可替换标签</a>
           </li>
         
       </ul>
