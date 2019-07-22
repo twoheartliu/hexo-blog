@@ -95,7 +95,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/07/22/hello-world-1/" data-id="cjye7139900014qogq6hbqb26" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/07/22/hello-world-1/" data-id="cjye74bgh000f89ogl98ja8r8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.twoheart.com/hexo-blog/2019/07/22/hello-world/" data-id="cjye7139300004qoga6dsi0yf" class="article-share-link">Share</a>
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/07/22/hello-world/" data-id="cjye74bgm000h89oglcym9cp9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -154,7 +154,637 @@
 
 
   
+    <article id="post-2019-6-10-common-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/06/10/2019-6-10-common-css/" class="article-date">
+  <time datetime="2019-06-10T09:39:51.000Z" itemprop="datePublished">2019-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/06/10/2019-6-10-common-css/">常用的 CSS 布局套路</a>
+    </h1>
+  
 
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>这里记录一下基础的 CSS 布局套路</p>
+</blockquote>
+<h2 id="左右布局"><a href="#左右布局" class="headerlink" title="左右布局"></a>左右布局</h2><img src="http://ww1.sinaimg.cn/large/4871c945ly1g3w7sp70bxj20by0c6dfp.jpg">
+<a href="https://jsbin.com/layicehona/edit?html,output" target="_blank">show in JSbin<a>
+
+<h2 id="三栏布局"><a href="#三栏布局" class="headerlink" title="三栏布局"></a>三栏布局</h2><img src="http://ww1.sinaimg.cn/large/4871c945ly1g3w9owo8woj217609iaaj.jpg">
+<a href="https://jsbin.com/digofugowo/edit?html,css,output" target="_blank">show in JSbin<a>
+
+<h2 id="各种居中"><a href="#各种居中" class="headerlink" title="各种居中"></a>各种居中</h2><img src="http://ww1.sinaimg.cn/large/4871c945ly1g3waa8htbxj20no0og3zq.jpg">
+<a href="https://jsbin.com/jubitatore/edit?html,css,output" target="_blank">show in JSbin<a>
+<br>
+<br>
+THE END
+</a></a></a></a></a></a>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/06/10/2019-6-10-common-css/" data-id="cjye74bgf000c89ogtxp473x4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-6-1-bref-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/06/01/2019-6-1-bref-css/" class="article-date">
+  <time datetime="2019-06-01T15:52:00.000Z" itemprop="datePublished">2019-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/06/01/2019-6-1-bref-css/">CSS 简义</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>CSS 是一门玄学<br>这里记录一下基础的 CSS 套路</p>
+</blockquote>
+<h2 id="float-解决高度塌陷问题"><a href="#float-解决高度塌陷问题" class="headerlink" title="float 解决高度塌陷问题"></a>float 解决高度塌陷问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::after &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在需要浮动的子元素设置 <code>float: left</code> 之后，需要使用 clearfix 套路放在父元素上，否则会使下方所有文档流塌陷到上部，导致页面布局发生问题。</p>
+<h2 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h2><p>文档流的英文是 Normal Flow，文档流是一个很垃圾的翻译。</p>
+<p>文档流代表元素在文档中的「流动」方向。</p>
+<p>float:left、position:fixed、position:absolute 都能使元素脱离文档流。</p>
+<h3 id="内联元素文档流"><a href="#内联元素文档流" class="headerlink" title="内联元素文档流"></a>内联元素文档流</h3><p>默认：从左往右，如果遇到阻碍自动换行</p>
+<p>英文默认不会被换行分割</p>
+<p>如果需要，使用属性：</p>
+<p><code>word-break: break-all; //默认 break-word;</code></p>
+<p>一旦脱离文档流，元素高度将不占用文档流高度</p>
+<h3 id="background"><a href="#background" class="headerlink" title="background"></a>background</h3><p>背景图按比例缩放：<br><code>background-size: cover;</code></p>
+<p>背景图蒙版： </p>
+<p><code>background: rgba(0, 0, 0, 0.8)//最后一项是透明度</code></p>
+<p>背景图位置居中：</p>
+<p><code>background-positon: center center;//上下 左右 位置</code></p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><p>尽量不要使用固定宽高：<br>使用 padding 进行布局，从内向外撑起需要的宽高。</p>
+<ul>
+<li>减少 bug</li>
+<li>方便修改文案</li>
+</ul>
+<h3 id="CSS-画三角形"><a href="#CSS-画三角形" class="headerlink" title="CSS 画三角形"></a>CSS 画三角形</h3><p>利用 border</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">width: 0px;</span><br><span class="line">border: 10px solid transparent;</span><br><span class="line">border-left-color: #E6686A;</span><br><span class="line">border-top-width: 0px;</span><br><span class="line">border-right-width: 0px;</span><br></pre></td></tr></table></figure>
+
+<p>详见：<a href="https://css-tricks.com/the-shapes-of-css/#triangle-topleft" target="_blank" rel="noopener">css-tricks</a></p>
+<p>THE END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/06/01/2019-6-1-bref-css/" data-id="cjye74bge000a89ogykm4ypwv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-5-28-bref-html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/05/28/2019-5-28-bref-html/" class="article-date">
+  <time datetime="2019-05-27T17:00:40.000Z" itemprop="datePublished">2019-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/05/28/2019-5-28-bref-html/">值得一提的 HTML</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>很多新手觉得 HTML 实在过于简单，草草地把 HTML 标签过一下，就 div + span 一把梭地用起来了。<br>用当然是可以用的，凑合谁不会呢？如果你相信自己不止于此，那么就应向青草更青处漫溯。</p>
+</blockquote>
+<h2 id="iframe-与-a-的联动"><a href="#iframe-与-a-的联动" class="headerlink" title="iframe 与 a 的联动"></a>iframe 与 a 的联动</h2><p>iframe 是一个新生代前端不常用也不屑用的标签了，但很多不屑于做某事的人其实是真的不会做而已。<br><br><br><br><br>我们知道 iframe 是一个页面上的子页面:<br><br><br><code>&lt;iframe src=&quot;https://www.baidu.com&quot; name=&quot;xxx&quot;&gt;&lt;/iframe&gt;</code><br><br><br>当 a 标签的 target 属性和 iframe 的 name 属性进行绑定时，iframe 所呈现的内容将是 a 标签点击后的网页内容。<br><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;#&quot; name=&quot;xxx&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;http://www.qq.com&quot;&gt;QQ&lt;a/&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;http://www.baidu.com&quot;&gt;baidu&lt;a/&gt;</span><br></pre></td></tr></table></figure>
+
+<br>
+iframe 并不只打开网页：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;#&quot; name=&quot;xxx&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;qq.com&quot;&gt;QQ&lt;a/&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;baidu.com&quot;&gt;baidu&lt;a/&gt;</span><br></pre></td></tr></table></figure>
+
+<br>
+这将打开当前目录下的名为 `aa.com` 和 `baidu.com` 的文件
+<br>
+iframe 将根据当前页面类型打开页面：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;#&quot; name=&quot;xxx&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;//qq.com&quot;&gt;QQ&lt;a/&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;//baidu.com&quot;&gt;baidu&lt;a/&gt;</span><br></pre></td></tr></table></figure>
+
+<br>
+如果你直接在网页打开 HTML 页面，这将表示用 file 格式打开当前目录下的名为 `qq.com` 和 `baidu.com` 的文件
+<br>
+如果你使用 http-server 模拟服务器环境打开 HTML 页面，这将表示用 HTTP 格式打开 `qq.com` 和 `baidu.com` 的文件，自然就是腾讯和百度的首页
+<br>
+iframe 将根据 a 标签的 target 决定在哪儿打开页面：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a target=&quot;_blank&quot; href=&quot;http://qq.com&quot;&gt;blank QQ&lt;a/&gt;</span><br><span class="line">&lt;a target=&quot;_self&quot; href=&quot;http://qq.com&quot;&gt;self QQ&lt;a/&gt;</span><br><span class="line">&lt;a target=&quot;_parent&quot; href=&quot;http://qq.com&quot;&gt;parent QQ&lt;a/&gt;</span><br><span class="line">&lt;a target=&quot;_top&quot; href=&quot;http://qq.com&quot;&gt;top QQ&lt;a/&gt;</span><br></pre></td></tr></table></figure>
+
+<br>
+当我们在页面中的 iframe 的子页面使用这段代码时，当几个按钮被点击时，我们将看到：
+- blank QQ 在新标签页被打开了（新标签页）
+- self QQ 在 iframe 的子页面中被打开了（自己的页面）
+- parent QQ 在 iframe 页面被打开了（父页面）
+- top QQ 在当前页面被打开了（最上一级页面）
+<br>
+## form 标签
+a 标签可以认为是使用了 GET 方法请求服务器，那 form 就是与之对应的通常用 POST 方法来发送请求。
+```
+- form 只能发送 GET / POST 请求。
+- 那如果你使用 GET 方法，form 将自动把数据放在查询参数。
+- 如果你使用 POST 方法，如果需要使用查询参数，则可以将查询参数放在 action 中。
+- 在 form 中，button 标签默认被当做有 submit 属性的，可以当做提交按钮。
+- 当强制设置 button 的 type 时，提交属性将不存在。
+<br>
+## table 标签
+table 标签的子标签只能是 thead tbody tfoot 和 colgroup。
+
+<table border="1">
+    <thead>
+      <tr>
+        <th>综合项目</th>
+        <th>姓名</th>
+        <th>身高</th>
+        <th>年龄</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <td>小明</td>
+        <td>150</td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>小王</td>
+        <td>149</td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>小花</td>
+        <td>151</td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <th>平均年龄</th>
+        <td></td>
+        <td></td>
+        <td>13</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>综合评价</th>
+        <td></td>
+        <td>优</td>
+        <td>良</td>
+      </tr>
+    </tfoot>
+  </table>
+
+<br>
+tfoot / thead / tbody 的 书写顺序不影响最终展示的顺序，浏览器将根据标签自动按默认顺序进行展示
+<br>
+如果不写标签，浏览器会将 table 下的标签默认当做 tbody 显示。
+<br>
+html 用的较多又常被大家忽略的标签的知识点就跟大家分享到这里，还是有不少遗漏，有机会将补充到接下来的文章中。感谢你能看到这里。鞠躬。
+<br>
+<br>
+THE END
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/28/2019-5-28-bref-html/" data-id="cjye74bgc000889ogne9dutom" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-5-24-tags" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/05/24/2019-5-24-tags/" class="article-date">
+  <time datetime="2019-05-23T16:32:47.000Z" itemprop="datePublished">2019-05-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/05/24/2019-5-24-tags/">空标签和可替换标签</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="空标签"><a href="#空标签" class="headerlink" title="空标签"></a>空标签</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">没有闭合的标签称为空标签，也叫空元素。如：&lt;br/&gt;和&lt;img/&gt;等。他们不存在成对的情况。</span><br><span class="line"></span><br><span class="line">在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， &lt;input type=&quot;text&quot;&gt;&lt;/input&gt; 的闭标签是无效的 HTML。</span><br><span class="line"></span><br><span class="line">反之具有成对性质的，且有效的，例如：&lt;div&gt;&lt;/div&gt;、&lt;form&gt;&lt;/form&gt;就不是空标签。</span><br><span class="line"></span><br><span class="line">在 HTML 中有以下这些空元素：</span><br><span class="line"></span><br><span class="line">&lt;area&gt;</span><br><span class="line">&lt;base&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;col&gt;</span><br><span class="line">&lt;colgroup&gt; when the span is present</span><br><span class="line">&lt;command&gt;</span><br><span class="line">&lt;embed&gt;</span><br><span class="line">&lt;hr&gt;</span><br><span class="line">&lt;img&gt;</span><br><span class="line">&lt;input&gt;</span><br><span class="line">&lt;keygen&gt;</span><br><span class="line">&lt;link&gt;</span><br><span class="line">&lt;meta&gt;</span><br><span class="line">&lt;param&gt;</span><br><span class="line">&lt;source&gt;</span><br><span class="line">&lt;track&gt;</span><br><span class="line">&lt;wbr&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="可替换标签"><a href="#可替换标签" class="headerlink" title="可替换标签"></a>可替换标签</h1><p>这些元素是一种外部对象，它们外观的渲染，是独立于 CSS 的。</p>
+<p>简单来说，它们的内容不受当前文档的样式的影响。CSS 可以影响可替换元素的位置，但不会影响到可替换元素自身的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">典型的可替换元素有：</span><br><span class="line"></span><br><span class="line">&lt;iframe&gt;</span><br><span class="line">&lt;video&gt;</span><br><span class="line">&lt;embed&gt;</span><br><span class="line">&lt;img&gt;</span><br><span class="line"></span><br><span class="line">有些元素仅在特定情况下被作为可替换元素处理，例如：</span><br><span class="line"></span><br><span class="line">&lt;option&gt;</span><br><span class="line">&lt;audio&gt;</span><br><span class="line">&lt;canvas&gt;</span><br><span class="line">&lt;object&gt;</span><br><span class="line">&lt;applet&gt;</span><br></pre></td></tr></table></figure>
+
+<p>THE END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/24/2019-5-24-tags/" data-id="cjye74bg9000789ogjqwp0ao2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-5-23-http-basic" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/05/23/2019-5-23-http-basic/" class="article-date">
+  <time datetime="2019-05-22T17:06:01.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/05/23/2019-5-23-http-basic/">HTTP 基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="WWW-的发明"><a href="#WWW-的发明" class="headerlink" title="WWW 的发明"></a>WWW 的发明</h1><p>Tim Berners-Lee（下文中称为李爵士）在 1989 年至 1992 年间，发明了 WWW（World Wide Web），一种适用于全世界的网络。主要包含三个概念</p>
+<ol>
+<li>URI，俗称网址</li>
+<li>HTTP，两个电脑之间传输内容的协议</li>
+<li>HTML，超级文本，主要用来做页面跳转<br>URL 的作用是能让你访问一个页面，HTTP 的作用是让你能下载这个页面，HTML 的作用是让你能看懂这个页面。<br>这是一个简单而完美的系统。李爵士除了发明了这些概念，还付诸了行动：</li>
+<li>发明了第一个服务器</li>
+<li>发明了第一个浏览器</li>
+<li>写出了第一个网页</li>
+</ol>
+<h1 id="URI-是什么"><a href="#URI-是什么" class="headerlink" title="URI 是什么"></a>URI 是什么</h1><p>Google URI 维基百科即可查看全称。<br>URI 分为 URL 和 URN，我们一般使用 URL 作为网址。</p>
+<h2 id="URN"><a href="#URN" class="headerlink" title="URN"></a>URN</h2><p>Google URN 维基百科即可查看全称。<br>ISBN: 9787115275790 就是一个 URN，通过 URN 你可以确定一个「唯一的」资源，ISBN: 9787115275790 对应的资源的是《JavaScript 高级程序设计（第三版）》这本书。你去是介绍任何一个图书馆、书店，他们都知道是这本书。</p>
+<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>Google URL 维基百科即可查看全称。<br><a href="https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5" target="_blank" rel="noopener">https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5</a> 就是一个 URL，通过 URL 你可以确定一个「唯一的」地址（网址）。</p>
+<h1 id="HTTP-请求与响应"><a href="#HTTP-请求与响应" class="headerlink" title="HTTP 请求与响应"></a>HTTP 请求与响应</h1><h2 id="请求的格式"><a href="#请求的格式" class="headerlink" title="请求的格式"></a>请求的格式</h2><p>1 动词路径协议/版本<br>2 Key1: value1<br>2 Key2: value2<br>2 Key3: value3<br>2 Content-Type: application/x-www-form-urlencoded<br>2 Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>2 User-Agent: curl/7.54.0<br>3<br>4 要上传的数据<br>请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）<br>第三部分永远都是一个回车（\n）<br>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等<br>这里的路径包括「查询参数」，但不包括「锚点」<br>如果你没有写路径，那么路径默认为 /<br>第 2 部分中的 Content-Type 标注了第 4 部分的格式</p>
+<h2 id="响应的格式"><a href="#响应的格式" class="headerlink" title="响应的格式"></a>响应的格式</h2><p>1 协议/版本号状态码状态解释<br>2 Key1: value1<br>2 Key2: value2<br>2 Content-Length: 17931<br>2 Content-Type: text/html<br>3<br>4 要下载的内容</p>
+<h2 id="用-Chrome-查看请求与响应"><a href="#用-Chrome-查看请求与响应" class="headerlink" title="用 Chrome 查看请求与响应"></a>用 Chrome 查看请求与响应</h2><h3 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h3><p>打开 Network<br>地址栏输入网址<br>在 Network 点击，查看 request，点击「view source」<br>如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到</p>
+<h3 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h3><p>查看 Response Headers，点击「view source」，点击「view source」，点击「view source」<br>你会看到<strong>响应</strong>的前两部分<br>查看 Response 或者 Preview，你会看到<strong>响应</strong>的第 4 部分</p>
+<h2 id="cURL"><a href="#cURL" class="headerlink" title="cURL"></a>cURL</h2><p>cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年首次发行。<br>它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl。<br>命令行工具大部分集成了 curl。</p>
+<h3 id="查看网页源码"><a href="#查看网页源码" class="headerlink" title="查看网页源码"></a>查看网页源码</h3><p><code>$ curl www.sina.com</code></p>
+<h3 id="自动跳转"><a href="#自动跳转" class="headerlink" title="自动跳转"></a>自动跳转</h3><p><code>$ curl -L www.sina.com</code></p>
+<h3 id="显示头信息"><a href="#显示头信息" class="headerlink" title="显示头信息"></a>显示头信息</h3><p><code>$ curl -i www.sina.com</code></p>
+<h3 id="显示通信过程"><a href="#显示通信过程" class="headerlink" title="显示通信过程"></a>显示通信过程</h3><p><code>$ curl -v www.sina.com</code></p>
+<h3 id="HTTP动词"><a href="#HTTP动词" class="headerlink" title="HTTP动词"></a>HTTP动词</h3><p><code>$ curl -X POST www.example.com</code><br>等等。</p>
+<p>THE END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/23/2019-5-23-http-basic/" data-id="cjye74bg6000589og5tgs0d1n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/HTTP/">HTTP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-5-17-github-page-error" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/05/17/2019-5-17-github-page-error/" class="article-date">
+  <time datetime="2019-05-16T16:57:08.000Z" itemprop="datePublished">2019-05-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/05/17/2019-5-17-github-page-error/">Github Page —— build warning 之坑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>自从恢复使用博客以来，每次向 Github push 代码总会如期而至的收到一封发自 Github 的题为 Page build warning 的来信。</p>
+<img src="https://www.twoheart.cn/img/in-post/post-github-page-warning.jpg">
+
+<p>今天下班早，我决定试着解决一下这个问题。</p>
+<p>道路是曲折的，通过 Google ，我发现似乎是由于顶级域名和 DNS 配置过期的量子纠缠而引发的问题。</p>
+<p>似乎只有不多的几篇中文博客谈到了这个问题。</p>
+<p>在试着通过 <a href="http://seanlook.com/2014/11/08/github-mail-warning-dns/" target="_blank" rel="noopener">这篇博客<a> 以及 <a href="https://zhangjh.me/2015/12/11/gitpages-warning/" target="_blank" rel="noopener">另一篇博客<a> 的方法设置之后，依然没有解决。</a></a></a></a></p>
+<p>在群里问了大佬，大佬给出的建议是——将 @github 设置为垃圾邮件。</p>
+<p>这当然是一个简单粗暴又省时的好办法。</p>
+<p>但是作为一个江湖儿女，我决定再挣扎一番。</p>
+<p>在尝试了多个语句之后，终于在 <a href="https://www.reddit.com/r/webdev/comments/av9e9z/custom_domain_for_github_pages_is_pointed_at_an/" target="_blank" rel="noopener">reddit<a> 以及 <a href="https://stackoverflow.com/questions/9082499/custom-domain-for-github-project-pages" target="_blank" rel="noopener">stackoverflow<a> 找到了几乎正确的方法。</a></a></a></a></p>
+<p>在用顶级域名尝试了上面两个网站的设置之后，问题依旧。最后抱着死马当活马医的心情，设置了 www 域名前缀，问题终于算是解决了。</p>
+<p>在 Github Warning 解除之后，顺便升级了下 HTTPS 。</p>
+<p>今天的故事告诉我们：</p>
+<ol>
+<li>学好英文很重要</li>
+<li>勇于尝试很重要</li>
+<li>钻牛角尖很浪费时间</li>
+</ol>
+<p>THE END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/17/2019-5-17-github-page-error/" data-id="cjye74bg5000489ogyeqtflyi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-5-15-command-line" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/05/15/2019-5-15-command-line/" class="article-date">
+  <time datetime="2019-05-14T16:56:59.000Z" itemprop="datePublished">2019-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/05/15/2019-5-15-command-line/">前端（只）需要掌握这些命令行（就还行了）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th>命令</th>
+<th>全拼</th>
+<th>缩写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>创建目录</td>
+<td>make directory</td>
+<td>mkdir</td>
+</tr>
+<tr>
+<td>删除</td>
+<td>remove</td>
+<td>rm</td>
+</tr>
+<tr>
+<td>移动/重命名</td>
+<td>move</td>
+<td>mv</td>
+</tr>
+<tr>
+<td>复制</td>
+<td>copy</td>
+<td>cp</td>
+</tr>
+<tr>
+<td>罗列</td>
+<td>list</td>
+<td>ls</td>
+</tr>
+<tr>
+<td>改变目录</td>
+<td>change directory</td>
+<td>cd</td>
+</tr>
+</tbody></table>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><ol>
+<li>windows 用户在任意目录使用 shift + 右键 打开 cmd 或者 powershell；或通过其他方式打开命令行</li>
+<li><code>cd ~/Desktop</code> 回车</li>
+<li>恭喜你在命令行里进入了桌面</li>
+<li>输入命令 <code>mkdir demo1</code></li>
+<li><code>cd demo1</code> 进入目录</li>
+<li><code>cd ..</code> 回退到桌面</li>
+<li><code>rm -rf demo1</code> 删除目录，其中 -r 表示递归地删除路径下的所有文件，如果删除的是文件夹必须加 -r；-f 表示强制删除，不加的话在 Linux / Unix 系统下每删除一个文件都会提示是否删除</li>
+<li><code>touch 1.txt</code> 创建文件</li>
+<li><code>mv 1.txt 2.txt</code> 将 1.txt 移动到 2.txt 可以理解为重命名</li>
+<li><code>ls</code> 列出桌面上所有的文件</li>
+<li><code>echo &#39;hello&#39; &gt; 2.txt</code> 将 hello 字符串写入到 2.txt 中</li>
+<li><code>cat 2.txt</code> 在命令行中展示 2.txt 中内容</li>
+</ol>
+<h2 id="使用-explainshell"><a href="#使用-explainshell" class="headerlink" title="使用 explainshell"></a>使用 explainshell</h2><p>以上这些命令足以覆盖日常工作中 60% 以上的使用场景，但总有看到命令一时想不起或者就是一个非常少见的命令，如果你需要快速权威的使用指南，请使用 <a href="https://explainshell.com/" target="_blank" rel="noopener">https://explainshell.com/</a></p>
+<img class="shadow" src="/img/in-post/post-command-line/post-command-line-1.png">
+<br>
+输入命令后指向命令的一部分查看简单释义，如果不过瘾，点击根命令查看命令引申的所有命令。
+<br>
+<img class="shadow" src="/img/in-post/post-command-line/post-command-line-2.png">
+
+<p>没了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/05/15/2019-5-15-command-line/" data-id="cjye74bg3000389ogl9jdz2x4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/命令行/">命令行</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-4-17-react-note-0" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-blog/2019/04/17/2019-4-17-react-note-0/" class="article-date">
+  <time datetime="2019-04-17T02:09:14.000Z" itemprop="datePublished">2019-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hexo-blog/2019/04/17/2019-4-17-react-note-0/">react 基础梳理(1)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>首发于我的知乎专栏<a href="https://zhuanlan.zhihu.com/p/62764830" target="_blank" rel="noopener">二心集</a>，转载请保留链接：）</p>
+</blockquote>
+<h2 id="架构与工作原理"><a href="#架构与工作原理" class="headerlink" title="架构与工作原理"></a>架构与工作原理</h2><p><em>广告语：React 是声明式、组件化、高效、灵活的前端框架</em></p>
+<h3 id="React-的理念"><a href="#React-的理念" class="headerlink" title="React 的理念"></a>React 的理念</h3><p>归结为一个公式：</p>
+<p>​     UI = render(data)</p>
+<p>用户看到的界面（UI），应该是一个函数（render）的执行结果，只接受数据（data）作为参数。这个函数是一个<strong>纯函数</strong>，所谓纯函数指的是没有任何副作用，输出完全依赖于输入的函数，两次函数调用如果输入相同，那么输出也绝对相同。那么，最终的用户界面，在 render 函数确定的情况下完全取决于输入数据。</p>
+<p>对于开发者来说，重要的是区分开哪些是属于 data，哪些属于 render，想要更新用户界面，要做的就是要更新 data，用户界面自然会做出响应，所以 React 实践的也是”响应式编程”（Reactive Programming）的思想，这也是 React 为什么叫做 React 的原因。</p>
+<h3 id="虚拟（Virtual）DOM"><a href="#虚拟（Virtual）DOM" class="headerlink" title="虚拟（Virtual）DOM"></a>虚拟（Virtual）DOM</h3><p>React 应用通过重复渲染来实现用户交互，每当 state 、props 改变，render 函数会重新被调用，似乎是会造成性能的浪费，但是事实是 React 利用 Virtual DOM，让每次渲染都只重新渲染最少的 DOM 元素。</p>
+<h4 id="什么是-DOM-？"><a href="#什么是-DOM-？" class="headerlink" title="什么是 DOM ？"></a>什么是 DOM ？</h4><p>文档对象模型（Document Object Model，简称<strong>DOM</strong>），其实就是 HTML 文本，HTML 中的每个元素对应 DOM 的某个节点。因为 HTML 元素的逐级包含关系， DOM 节点自然就构成一个树形结构，称为 DOM 树。</p>
+<p>浏览器为了渲染 HTML 格式的网页，会先将 HTML 文本解析以构建 DOM 树，然后根据 DOM 树渲染出用户看到的界面，当要改变界面内容的时候，就去改变 DOM 树上的节点。</p>
+<p>Web 前端开发关于性能优化有一个原则：<strong>尽量减少 DOM 操作</strong>。虽然 DOM 操作只是一些简单的 JavaScript 语句，但是 DOM 操作会引起浏览器对网页进行重新布局，重新绘制，这就是一个比 JavaScript 语句执行慢得多的过程。</p>
+<p>而 React 并不是通过语句直接构建 DOM 树，而是实现构建 Virtual DOM。如果说 DOM 树是对 HTML 的抽象，那么 Virtual DOM 就是对 DOM 树的抽象。 Virtual DOM 只存在于 JavaScript 中，每当渲染发生改变，Virtual DOM 会对比渲染前后的差异，修改真正的 DOM 树时只需要触及差别中的部分就行了。</p>
+<p>React 进行 Virtual DOM 的对比使用了一个改进版的 diff 算法，使得比对的时间复杂度由 O(N²) 降低到 O(N) ，但是这需要开发者提供 key 属性，并且保证 key 是唯一的且稳定不变的。</p>
+<h2 id="高质量的-React-组件"><a href="#高质量的-React-组件" class="headerlink" title="高质量的 React 组件"></a>高质量的 React 组件</h2><h3 id="组件划分的设计原则"><a href="#组件划分的设计原则" class="headerlink" title="组件划分的设计原则"></a>组件划分的设计原则</h3><p>作为软件设计的通则，组件的划分要满足<strong>高内聚</strong>和<strong>低耦合</strong>的原则。</p>
+<p>高内聚指的是把逻辑紧密相关的内容放在一个组件中。</p>
+<p>低耦合指的是不同组件之间的依赖关系要尽量弱化，也就是每个组件要尽量独立。</p>
+<h3 id="组件中的数据"><a href="#组件中的数据" class="headerlink" title="组件中的数据"></a>组件中的数据</h3><p>React 组件中的数据分为两种，prop 和 state，无论是 prop 还是 state 都会引发组件的重新渲染。</p>
+<p>什么时候用 prop 什么时候用 state ？</p>
+<p>在组件内部用 state，用于接受组件外部的属性用 prop。</p>
+<h4 id="PropTypes-类型检查"><a href="#PropTypes-类型检查" class="headerlink" title="PropTypes 类型检查"></a>PropTypes 类型检查</h4><p>使用 PropTypes 让组件声明自己的接口规范：</p>
+<pre><code>1. 这个组件支持哪些 prop
+2. 每个 prop 应该是什么样的格式</code></pre><h3 id="prop-和-state-对比"><a href="#prop-和-state-对比" class="headerlink" title="prop 和 state 对比"></a>prop 和 state 对比</h3><p>区别：</p>
+<pre><code>1. prop 用于定义外部接口，state 用于记录内部状态；
+2. prop 的赋值在外部世界使用组件时，state 的赋值在组件内部；
+3. 组件不应该改变 prop 的值，而 state 存在的目的就是让组件来改变的。</code></pre><p>state 通过 this.setState 函数修改 state 就改变了组件的状态，然后通过渲染过程把这种变化体现出来。</p>
+<p>组件不应该去修改传入的 props 值。如果父组件包含多个子组件，然后把值通过 props 传给这几个子组件，而某个子组件改变了这个值，接下来其他子组件读取这个值会变得混乱，无法预料是改变后的值还是最初值，这违背了 React 设计的初衷。</p>
+<p>​    UI = render(data)</p>
+<p>React 组件扮演的是 render 函数的角色，应该是一个没有副作用的纯函数。而修改 props 的值，是一个副作用，组件应该避免。</p>
+<h3 id="组件的生命周期"><a href="#组件的生命周期" class="headerlink" title="组件的生命周期"></a>组件的生命周期</h3><p>人有生老病死，有少青中老。组件也会有被创建、更新和删除，正如生命体一样，自然发生的状态。</p>
+<p>React 的生命周期可能会经历如下的过程：</p>
+<ul>
+<li>装载过程(Mount)，也就是把组件第一次在 DOM 树中渲染的过程；</li>
+<li>更新过程(Update)，当组件被重新渲染的过程；</li>
+<li>卸载过程(Unmount)， 组件从 DOM 中删除的过程。</li>
+</ul>
+<p>三种不同的过程，React 库会依次调用组件中的一些成员函数，这些成员函数被称为生命周期函数。</p>
+<p><img src="http://ww1.sinaimg.cn/large/4871c945ly1g25rraday1j21kw1nsjtm.jpg" alt></p>
+<h4 id="装载过程"><a href="#装载过程" class="headerlink" title="装载过程"></a>装载过程</h4><p><strong>1. constructor</strong></p>
+<p>ES6 中每个类的构造函数。并不是每个组件都需要定义自己的构造函数，无状态组件并不需要定义构造函数。</p>
+<p>一个 React 组件需要构造函数，往往是为了：</p>
+<ul>
+<li>初始化 state</li>
+<li>绑定成员函数的 this 环境</li>
+</ul>
+<p><strong>2. getInitialState 和 getDefaultProps</strong></p>
+<p>es6 语法下这两个生命周期函数无法产生作用且用处不大。</p>
+<p><strong>3. render</strong></p>
+<p>render 函数是 React 组件中最重要的函数，一个 React 组件其他函数都可以不实现，但是必须有 render 函数。因为所有 React 组件的父类 React.Component 类对除 render 之外的生命周期函数都有默认实现。</p>
+<p>render 函数应该是一个纯函数，完全根据 this.state 和 this.props 来决定返回的结果。所以不应该在 render 函数中调用 this.setState。</p>
+<p><strong>4. componentWillMount 和 componentDidMount</strong></p>
+<p>在装载过程中，componentWillMount 会在调用 render 函数前被调用，componentDidMount 会在调用 render 函数之后被调用。</p>
+<p>我们通常不需要使用 componentWillMount 函数，而 componentDidMount 作用巨大。</p>
+<p>另外 componentWillMount 可以在服务器端被调用也可以在浏览器端被调用，而 componentDidMount 只能在浏览器端被调用。这是一个很好的位置用来通过 Ajax 获取数据来填充组件中的内容。</p>
+<p>在 componentDidMount 被调用的时候，组件已经被装载到 DOM 树上，可以放心获取渲染出来的任何 DOM，我们可以利用这个特性，让 React 和其他 UI 库配合使用。</p>
+<h4 id="更新过程"><a href="#更新过程" class="headerlink" title="更新过程"></a>更新过程</h4><p><strong>1. componentWillReceiveProps(nextProps)</strong></p>
+<p>只要父组件的 render 函数被调用，在 render 函数里面被渲染的子组件就会经历更新过程，不管父组件传给子组件的 props 有没有改变。</p>
+<p><strong>2. shouldComponentUpdate(nextPorps, nextState)</strong></p>
+<p>除了 render 函数之外，React 生命周期组件最重要的函数。render 函数决定了应该渲染什么，而shouldComponentUpdate 决定了一个组件什么时候不需要渲染。</p>
+<p>shouldComponentUpdate 需要返回一个布尔值，告诉 React 库这个组件在这次更新过程中需不需要进行。</p>
+<p>如果使用得当 shouldComponentUpdate 会大大提高 React 的性能。</p>
+<p>*<em>3. componentWillUpdate 和 componentDidupdate *</em></p>
+<p>如果 shouldComponentUpdate 函数返回 true，接下来 React 会依次调用 componentWillUpdate 、render 和 componentDidupdate 函数。</p>
+<h4 id="卸载过程"><a href="#卸载过程" class="headerlink" title="卸载过程"></a>卸载过程</h4><p><strong>componentWillUnmount</strong></p>
+<p>当 React 组件要从 DOM 树上删除掉之前，对应的 componentWillUnmount 函数会被调用，适合执行一些清理性的工作。</p>
+<h3 id="父子组件传值"><a href="#父子组件传值" class="headerlink" title="父子组件传值"></a>父子组件传值</h3><p>我们知道通过 prop 可以从父组件传值给子组件，而子组件向父组件传值，其实也是通过 prop。</p>
+<p>我们可以通过 prop 让子组件调用父组件的方法，通过给父组件的方法传值，最终让父组件的方法实现对数据的改变。</p>
+<h3 id="state-和-prop-的局限"><a href="#state-和-prop-的局限" class="headerlink" title="state 和 prop 的局限"></a>state 和 prop 的局限</h3><p>多子组件之间每个子组件记录自己的状态会导致数据重复，如果数据不一致，很难决定到底哪个是正确结果。</p>
+<p>而全局状态，把数据源存在一个地方，将是解决这个问题的最佳方法。这也是我们接下来要讲的 Flux 、Redux 中 store 的概念。</p>
+<p>to be continued</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.twoheart.com/hexo-blog/2019/04/17/2019-4-17-react-note-0/" data-id="cjye74bh3001989og5whvq1jx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/hexo-blog/page/2/">2</a><a class="extend next" rel="next" href="/hexo-blog/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -164,15 +794,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/Coding/">Coding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/HTTP/">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/命令行/">命令行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/方法论/">方法论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-blog/tags/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hexo-blog/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/hexo-blog/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/hexo-blog/tags/Github/" style="font-size: 10px;">Github</a> <a href="/hexo-blog/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/hexo-blog/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/hexo-blog/tags/react/" style="font-size: 10px;">react</a> <a href="/hexo-blog/tags/前端/" style="font-size: 20px;">前端</a> <a href="/hexo-blog/tags/命令行/" style="font-size: 10px;">命令行</a> <a href="/hexo-blog/tags/方法论/" style="font-size: 10px;">方法论</a> <a href="/hexo-blog/tags/生活/" style="font-size: 10px;">生活</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-blog/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-blog/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-blog/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-blog/archives/2018/09/">September 2018</a></li></ul>
     </div>
   </div>
 
@@ -190,6 +834,18 @@
         
           <li>
             <a href="/hexo-blog/2019/07/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-blog/2019/06/10/2019-6-10-common-css/">常用的 CSS 布局套路</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-blog/2019/06/01/2019-6-1-bref-css/">CSS 简义</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-blog/2019/05/28/2019-5-28-bref-html/">值得一提的 HTML</a>
           </li>
         
       </ul>
